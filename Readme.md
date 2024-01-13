@@ -121,14 +121,63 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-@SuperBuilder(toBuilder = true)
+@Builder(toBuilder = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class Employee {
     private String name;
     private int employeeId;
+
+    public static void main(String[] args) {
+        Employee employee = Employee.builder()
+                .name("John Doe")
+                .employeeId(12345)
+                .build();
+
+
+    
+    }
 }
 ```
+## `@SuperBuilder`
+The @SuperBuilder annotation in Lombok is an extension of the @Builder pattern. It is particularly useful for classes that are part of an inheritance hierarchy. This annotation generates a builder with support for subclass attributes, enabling fluent object construction in hierarchies.
+
+Example:
+
+```java
+import lombok.experimental.SuperBuilder;
+
+// Base class
+@SuperBuilder
+public class Vehicle {
+    private String brand;
+    private String model;
+}
+
+// Subclass
+@SuperBuilder
+public class Car extends Vehicle {
+    private int seats;
+    private double engineSize;
+}
+
+public class LombokSuperBuilderExample {
+    public static void main(String[] args) {
+        // Creating an instance of Car using SuperBuilder
+        Car car = Car.builder()
+                .brand("Toyota")
+                .model("Camry")
+                .seats(5)
+                .engineSize(2.5)
+                .build();
+
+        System.out.println(car);
+    }
+}
+```
+
+
+
 ## `@Cleanup`
 The @Cleanup annotation automatically closes resources (e.g., streams) when they go out of scope, reducing the need for explicit resource management.
 

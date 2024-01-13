@@ -77,6 +77,14 @@ public class RegularPerson {
     public RegularPerson() {
     }
 
+    public RegularPerson(String firstName, String lastName, String email, String phoneNumber, Integer age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.age = age;
+    }
+
     public static void main(String[] args) {
         RegularPerson person = new RegularPerson();
         person.setFirstName("Mohamed");
