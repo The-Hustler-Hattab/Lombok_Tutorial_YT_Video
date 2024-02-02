@@ -1,4 +1,6 @@
 # Lombok Annotations Tutorial
+## Youtube Tutorial
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yctKNTNRCHQ/0.jpg)](https://www.youtube.com/watch?v=yctKNTNRCHQ&ab_channel=MohammedHattab)
 
 Welcome to the Lombok Annotations Tutorial! This guide will walk you through some of the most commonly used Lombok annotations to simplify and enhance your Java code. Lombok is a library that helps reduce boilerplate code in your Java projects, making your code cleaner and more maintainable.
 
